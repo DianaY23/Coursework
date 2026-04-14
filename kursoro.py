@@ -73,7 +73,7 @@ def adda_dda_laser(theta_vals, dipoles, plane='xz'):
         
         q = k_sca - k_inc
         
-        phases = np.exp(1j * np.dot(dipoles, q))
+        phases = E_inc * np.exp(1j * np.dot(dipoles, q))
         structure_factor = np.abs(np.sum(phases))**2 / N**2
         
         intensity = structure_factor
